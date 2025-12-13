@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 public class SceneBridge : MonoBehaviour
 {
     [SerializeField] string firstLevel = "Level_01";  // 처음 시작 레벨
+    [SerializeField] string finishScene = "FinishScreen";
     public static SceneBridge Instance { get; private set; }
 
     string currentLevel; // 지금 플레이 중인 레벨 이름
@@ -29,8 +30,18 @@ public class SceneBridge : MonoBehaviour
     // ⏭ 다음 레벨로 이동할 때 호출하는 함수
     public void LoadLevel(string name)
     {
-        currentLevel = name;          // ⭐ 여기 추가: 현재 레벨 갱신
-        StartCoroutine(Switch(name)); // 그리고 전환
+        // 다음 레벨이 있으면
+        if (Application.CanStreamedLevelBeLoaded(name))
+        {
+            currentLevel = name;
+            StartCoroutine(Switch(name));
+        }
+        // 다음 레벨이 없으면 → FinishScreen
+        else
+        {
+            currentLevel = finishScene;
+            StartCoroutine(Switch(finishScene));
+        }
     }
 
     IEnumerator LoadAdditive(string name)
