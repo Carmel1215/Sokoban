@@ -40,7 +40,7 @@ public class SceneBridge : MonoBehaviour
         else
         {
             currentLevel = finishScene;
-            StartCoroutine(Switch(finishScene));
+            SceneManager.LoadScene(currentLevel);
         }
     }
 
