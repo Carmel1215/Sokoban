@@ -195,7 +195,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 0, y: 0, z: -10}
-  orthographicSize: 5
+  orthographicSize: 6
 --- !u!4 &502448771
 Transform:
   m_ObjectHideFlags: 0

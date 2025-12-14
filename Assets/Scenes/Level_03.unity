@@ -194,8 +194,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd85fdc5ef67b44eab7faed4b932458e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  position: {x: 0, y: 0, z: -10}
-  orthographicSize: 5
+  position: {x: -0.5, y: 0, z: -10}
+  orthographicSize: 6
 --- !u!4 &502448771
 Transform:
   m_ObjectHideFlags: 0
