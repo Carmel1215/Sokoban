@@ -6,6 +6,7 @@ public class SceneBridge : MonoBehaviour
 {
     [SerializeField] string firstLevel = "Level_01";  // 처음 시작 레벨
     [SerializeField] string finishScene = "FinishScreen";
+    [SerializeField] PrintLevel printLevel;
     public static SceneBridge Instance { get; private set; }
 
     string currentLevel; // 지금 플레이 중인 레벨 이름
@@ -30,12 +31,15 @@ public class SceneBridge : MonoBehaviour
     // 다음 레벨로 이동
     public void LoadLevel(string name)
     {
+        // 다음 씬이 있을 때
         if (Application.CanStreamedLevelBeLoaded(name))
         {
             GameManager.Instance.AddScore(1000); // TODO: 점수 세는 시스템 정비 필요
             currentLevel = name;
             StartCoroutine(Switch(name));
+            printLevel.LoadLevelName(currentLevel);
         }
+        // 다음 씬이 없을 때
         else
         {
             GameManager.Instance.AddScore(1000);

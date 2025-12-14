@@ -176,7 +176,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Sokoban
+  m_text: SOKOBAN
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 75b34f93e537c4aa18a39e4ccaa06850, type: 2}
   m_sharedMaterial: {fileID: -5991475654472647221, guid: 75b34f93e537c4aa18a39e4ccaa06850, type: 2}
@@ -350,8 +350,8 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1330012507}
   - {fileID: 476356494}
+  - {fileID: 1330012507}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}

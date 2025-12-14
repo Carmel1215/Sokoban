@@ -285,7 +285,7 @@ GameObject:
   - component: {fileID: 345202998}
   - component: {fileID: 345202997}
   m_Layer: 5
-  m_Name: Finish
+  m_Name: GameOver
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -330,7 +330,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Finish
+  m_text: GAME OVER
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 75b34f93e537c4aa18a39e4ccaa06850, type: 2}
   m_sharedMaterial: {fileID: -5991475654472647221, guid: 75b34f93e537c4aa18a39e4ccaa06850, type: 2}
@@ -737,7 +737,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 160}
+  m_AnchoredPosition: {x: 0, y: 140}
   m_SizeDelta: {x: 560, y: 190}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &842373857
