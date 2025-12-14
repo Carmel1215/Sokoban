@@ -69,8 +69,8 @@ public class PrintScore : MonoBehaviour
                 () => 0,
                 x => scoreText.text = $"{x}점",
                 GameManager.Instance.score,
-                1.2f
-            ).SetEase(Ease.OutCubic)
+                3.0f
+            ).SetEase(Ease.OutExpo)
         );
     }
 }
