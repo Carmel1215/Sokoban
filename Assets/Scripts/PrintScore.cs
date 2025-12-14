@@ -24,7 +24,7 @@ public class PrintScore : MonoBehaviour
         Vector3 stagePos = stageText.transform.localPosition;
         Vector3 scorePos = scoreText.transform.localPosition;
 
-        // 초기화 (아래 + 투명)
+        // 초기화
         timeText.alpha  = 0;
         stageText.alpha = 0;
         scoreText.alpha = 0;

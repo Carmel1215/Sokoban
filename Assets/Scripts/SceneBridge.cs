@@ -21,23 +21,21 @@ public class SceneBridge : MonoBehaviour
 
     void Start() => StartCoroutine(LoadAdditive(currentLevel));
 
-    // 🔁 지금 레벨 다시하기
+    // 지금 레벨 다시하기
     public void ReloadLevel()
     {
         StartCoroutine(Switch(currentLevel));
     }
 
-    // ⏭ 다음 레벨로 이동할 때 호출하는 함수
+    // 다음 레벨로 이동
     public void LoadLevel(string name)
     {
-        // 다음 레벨이 있으면
         if (Application.CanStreamedLevelBeLoaded(name))
         {
             GameManager.Instance.AddScore(1000); // TODO: 점수 세는 시스템 정비 필요
             currentLevel = name;
             StartCoroutine(Switch(name));
         }
-        // 다음 레벨이 없으면 → FinishScreen
         else
         {
             currentLevel = finishScene;

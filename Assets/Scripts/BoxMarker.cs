@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class BoxMarker : MonoBehaviour
 {
-    public int id = 0; // 특정 조건을 지닌 목표지점과 대응하기 위함
+    public int id = 0; // 특정 조건을 지닌 목표지점과 대응하기 위함 (아마도 안 쓰일 듯?)
 
     void OnEnable()  { GoalManager.Instance?.RegisterBox(this); }
     void OnDisable() { GoalManager.Instance?.UnregisterBox(this); }

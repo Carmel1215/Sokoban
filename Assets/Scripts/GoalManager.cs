@@ -27,7 +27,6 @@ public class GoalManager : MonoBehaviour
         if (Instance == this) Instance = null;
     }
 
-    // --- 등록/해제: Marker에서 OnEnable/OnDisable로 호출 ---
     public void RegisterGoal(GoalMarker g)
     {
         if (g != null && !goals.Contains(g)) goals.Add(g);
@@ -45,7 +44,6 @@ public class GoalManager : MonoBehaviour
         if (b != null) boxes.Remove(b);
     }
 
-    // --- 외부 호출 ---
     public void TryCheckWin()
     {
         if (CheckWin()) OnCleared?.Invoke();
@@ -58,7 +56,6 @@ public class GoalManager : MonoBehaviour
         return Mathf.Max(0, total - covered);
     }
 
-    // --- 핵심 로직 ---
     public bool CheckWin()
     {
         CleanupNulls();
@@ -132,7 +129,6 @@ public class GoalManager : MonoBehaviour
         for (int i = boxes.Count - 1; i >= 0; i--) if (boxes[i] == null) boxes.RemoveAt(i);
     }
 
-    // --- Utils ---
     public static Vector2 SnapToGrid(Vector2 pos, float s)
     {
         float x = Mathf.Round(pos.x / s) * s;

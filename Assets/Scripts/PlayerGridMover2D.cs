@@ -40,7 +40,6 @@ public class PlayerGridMover2D : MonoBehaviour
         rb.interpolation = RigidbodyInterpolation2D.None;
         rb.freezeRotation = true;
 
-        // 초기 바라봄 전달(IdleBT가 바로 반영하도록)
         if (animator != null)
         {
             animator.SetFloat(HashMoveX, lastDir.x);
@@ -58,14 +57,13 @@ public class PlayerGridMover2D : MonoBehaviour
         Vector2 start = rb.position;
         Vector2 target = start + dir * step;
 
-        // 1) 벽/장애물
+        // 벽/장애물
         if (IsBlocked(start, dir, step)) return;
 
-        // 2) 다음 칸의 박스 확인
+        // 다음 칸의 박스 확인
         Vector2 mySize = (Vector2)selfCol.bounds.size - Vector2.one * skin;
         Collider2D boxColAtNext = Physics2D.OverlapBox(target, mySize, 0f, boxMask);
 
-        // 입력 확정 → 마지막 바라봄 및 시각 동기화
         lastDir = dir;
         if (animator != null)
         {
@@ -82,7 +80,6 @@ public class PlayerGridMover2D : MonoBehaviour
             Vector2 boxStart = boxRb.position;
             Vector2 boxEnd   = boxStart + dir * step;
 
-            // 3) 박스 다음 칸도 비어 있어야 밀 수 있음
             Vector2 boxSize = (Vector2)boxColAtNext.bounds.size - Vector2.one * skin;
             bool boxBlocked = Physics2D.OverlapBox(boxEnd, boxSize, 0f, blockMask | boxMask) != null;
             if (boxBlocked) return;
@@ -91,7 +88,7 @@ public class PlayerGridMover2D : MonoBehaviour
             return;
         }
 
-        // 4) 일반 이동
+        // 일반 이동
         StartCoroutine(MoveStep(start, target));
     }
 
@@ -162,7 +159,6 @@ public class PlayerGridMover2D : MonoBehaviour
 
     void OnStepFinished()
     {
-        // IdleBT는 MoveX/MoveY만으로 방향 유지
         if (animator != null)
         {
             animator.SetFloat(HashMoveX, lastDir.x);
