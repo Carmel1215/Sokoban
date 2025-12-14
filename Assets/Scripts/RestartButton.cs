@@ -5,6 +5,7 @@ public class RestartButton : MonoBehaviour
 {
     public void OnClicked()
     {
+        GameManager.Instance.Reset();
         SceneManager.LoadScene("Scenes/TitleScreen");
     }
 }

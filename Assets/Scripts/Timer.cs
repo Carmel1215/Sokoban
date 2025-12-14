@@ -39,6 +39,7 @@ public class Timer : MonoBehaviour
         {
             yield return new WaitForSeconds(1f);
             timeLeft--;
+            GameManager.Instance.time++; // 걸린 시간 세기
             UpdateText(timeLeft);
         }
 

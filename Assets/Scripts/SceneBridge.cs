@@ -33,6 +33,7 @@ public class SceneBridge : MonoBehaviour
         // 다음 레벨이 있으면
         if (Application.CanStreamedLevelBeLoaded(name))
         {
+            GameManager.Instance.AddScore(1000); // TODO: 점수 세는 시스템 정비 필요
             currentLevel = name;
             StartCoroutine(Switch(name));
         }
