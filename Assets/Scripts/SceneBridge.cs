@@ -38,6 +38,7 @@ public class SceneBridge : MonoBehaviour
         }
         else
         {
+            GameManager.Instance.AddScore(1000);
             currentLevel = finishScene;
             SceneManager.LoadScene(currentLevel);
         }
