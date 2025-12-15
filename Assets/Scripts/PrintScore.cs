@@ -68,7 +68,7 @@ public class PrintScore : MonoBehaviour
             DOTween.To(
                 () => 0,
                 x => scoreText.text = $"{x}점",
-                GameManager.Instance.score,
+                GameManager.Instance.score + 4000,
                 3.0f
             ).SetEase(Ease.OutExpo)
         );
