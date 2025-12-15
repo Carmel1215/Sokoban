@@ -926,7 +926,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ad13c3082ed44b7ead14810bbfebb28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Timer
-  seconds: 180
+  seconds: 300
   timerText: {fileID: 771842044}
   finishSceneName: FinishScreen
 --- !u!1 &1131785042
