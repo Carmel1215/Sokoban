@@ -58,7 +58,11 @@ public class PlayerGridMover2D : MonoBehaviour
         Vector2 target = start + dir * step;
 
         // 벽/장애물
-        if (IsBlocked(start, dir, step)) return;
+        if (IsBlocked(start, dir, step))
+        {
+            // TODO: 이동 못 할 때 소리 재생
+            return;
+        }
 
         // 다음 칸의 박스 확인
         Vector2 mySize = (Vector2)selfCol.bounds.size - Vector2.one * skin;
@@ -82,13 +86,19 @@ public class PlayerGridMover2D : MonoBehaviour
 
             Vector2 boxSize = (Vector2)boxColAtNext.bounds.size - Vector2.one * skin;
             bool boxBlocked = Physics2D.OverlapBox(boxEnd, boxSize, 0f, blockMask | boxMask) != null;
-            if (boxBlocked) return;
+            if (boxBlocked)
+            {
+                // TODO: 막힘 사운드 재생
+                return;
+            }
 
+            SoundManager.Instance.PlaySFX(SoundManager.Instance.boxPush);
             StartCoroutine(MovePlayerAndBox(start, target, boxRb, boxStart, boxEnd));
             return;
         }
 
         // 일반 이동
+        SoundManager.Instance.PlaySFX(SoundManager.Instance.move);
         StartCoroutine(MoveStep(start, target));
     }
 

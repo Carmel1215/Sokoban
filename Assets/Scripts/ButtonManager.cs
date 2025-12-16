@@ -5,11 +5,13 @@ public class ButtonManager : MonoBehaviour
 {
     public void OnStartButtonClicked()
     {
+        SoundManager.Instance.PlaySFX(SoundManager.Instance.click);
         SceneManager.LoadScene("Core");
     }
 
     public void OnRetryButtonClicked()
     {
+        SoundManager.Instance.PlaySFX(SoundManager.Instance.click);
         SceneBridge bridge = FindFirstObjectByType<SceneBridge>();
 
         if (bridge != null)
@@ -20,11 +22,13 @@ public class ButtonManager : MonoBehaviour
 
     public void OnGiveUpButtonClicked()
     {
+        SoundManager.Instance.PlaySFX(SoundManager.Instance.click);
         SceneManager.LoadScene("FinishScreen");
     }
 
     public void OnRestartButtonClicked()
     {
+        SoundManager.Instance.PlaySFX(SoundManager.Instance.click);
         GameManager.Instance.Reset();
         SceneManager.LoadScene("TitleScreen");
     }
