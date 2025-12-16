@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class SceneBridge : MonoBehaviour
 {
-    [SerializeField] string firstLevel = "Level_01";  // 처음 시작 레벨
+    [SerializeField] string firstLevel = "Level_00";  // 처음 시작 레벨
     [SerializeField] string finishScene = "FinishScreen";
     [SerializeField] PrintLevel printLevel;
     public static SceneBridge Instance { get; private set; }
@@ -20,7 +20,11 @@ public class SceneBridge : MonoBehaviour
         currentLevel = firstLevel;
     }
 
-    void Start() => StartCoroutine(LoadAdditive(currentLevel));
+    void Start()
+    {
+        printLevel.LoadLevelName(currentLevel);
+        StartCoroutine(LoadAdditive(currentLevel));
+    }
 
     // 지금 레벨 다시하기
     public void ReloadLevel()

@@ -163,7 +163,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f559219b5e20448bb87a7a65569662e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firstLevel: Level_01
+  firstLevel: Level_00
   finishScene: FinishScreen
   printLevel: {fileID: 473489746}
 --- !u!1 &304926630
@@ -317,7 +317,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 01
+  m_text: 00
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 75b34f93e537c4aa18a39e4ccaa06850, type: 2}
   m_sharedMaterial: {fileID: -5991475654472647221, guid: 75b34f93e537c4aa18a39e4ccaa06850, type: 2}
