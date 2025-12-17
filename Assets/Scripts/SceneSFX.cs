@@ -2,9 +2,8 @@ using UnityEngine;
 
 public class SceneSFX : MonoBehaviour
 {
-    [SerializeField] AudioClip sfx;
     void Start()
     {
-        SoundManager.Instance.PlaySFX(sfx);
+        SoundManager.Instance.PlaySFX(SoundManager.Instance.clear);
     }
 }

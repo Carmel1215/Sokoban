@@ -858,7 +858,7 @@ MonoBehaviour:
   move: {fileID: 8300000, guid: 01f73359a580c4ec785e86c58bc786e9, type: 3}
   boxPush: {fileID: 8300000, guid: 43fc06c43659b4a41902147c1805b080, type: 3}
   goal: {fileID: 0}
-  clear: {fileID: 0}
+  clear: {fileID: 8300000, guid: 25a1618dd30d64bba89d647ba6cb3ed7, type: 3}
   click: {fileID: 8300000, guid: 00bdeaf4f444d4f6b89776ac031bb09b, type: 3}
 --- !u!1 &1748405599
 GameObject:
