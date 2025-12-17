@@ -4,8 +4,8 @@ Sokoban은 2025학년도 북일고 학예술제를 위해 출품한 작품으로
 
 ## Installation
 
-1. Release에 들어갑니다.
-2. 운영체제에 맞춰 zip 파일을 다운받습니다.
+1. Releases에 들어갑니다.
+2. 운영체제에 맞춰 zip 파일을 다운받습니다. (Windows: Sokoban.zip / Mac: Sokoban.app.zip)
 3. 압축을 풀고 실행 파일을 실행합니다.
 
 ## Usage
