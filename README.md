@@ -4,7 +4,9 @@ Sokoban은 2025학년도 북일고 학예술제를 위해 출품한 작품으로
 
 ## Installation
 
-아직 설치법이 없습니다.
+1. [Download Link](https://carmel1215.itch.io/sokoban)에 들어갑니다.
+2. 운영체제에 맞춰 zip 파일을 다운받습니다.
+3. 압축을 풀고 실행 파일을 실행합니다.
 
 ## Usage
 
