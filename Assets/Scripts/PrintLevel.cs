@@ -7,14 +7,6 @@ public class PrintLevel : MonoBehaviour
 
     public void LoadLevelName(string levelName)
     {
-        string num = levelName[^2..];
-        if (num == "00")
-        {
-            levelText.text = "Tutorial";
-        }
-        else
-        {
-            levelText.text = num;
-        }
+        levelText.text = levelName[^2..];
     }
 }

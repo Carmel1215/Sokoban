@@ -163,7 +163,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f559219b5e20448bb87a7a65569662e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firstLevel: Level_00
+  firstLevel: Level_01
   finishScene: FinishScreen
   printLevel: {fileID: 473489746}
 --- !u!1 &304926630

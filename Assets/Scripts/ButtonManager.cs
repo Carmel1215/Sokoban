@@ -6,7 +6,7 @@ public class ButtonManager : MonoBehaviour
     public void OnStartButtonClicked()
     {
         SoundManager.Instance.PlaySFX(SoundManager.Instance.click);
-        SceneManager.LoadScene("Core");
+        SceneManager.LoadScene("Tutorial");
     }
 
     public void OnRetryButtonClicked()
