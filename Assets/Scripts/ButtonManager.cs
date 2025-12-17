@@ -6,6 +6,7 @@ public class ButtonManager : MonoBehaviour
     public void OnStartButtonClicked()
     {
         SoundManager.Instance.PlaySFX(SoundManager.Instance.click);
+        SoundManager.Instance.StopBGM();
         SceneManager.LoadScene("Tutorial");
     }
 
@@ -23,6 +24,7 @@ public class ButtonManager : MonoBehaviour
     public void OnGiveUpButtonClicked()
     {
         SoundManager.Instance.PlaySFX(SoundManager.Instance.click);
+        SoundManager.Instance.StopBGM();
         SceneManager.LoadScene("FinishScreen");
     }
 

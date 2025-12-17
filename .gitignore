@@ -100,3 +100,4 @@ InitTestScene*.unity*
 .idea/
 build_windows/
 .DS_Store
+Assets/Audio/BGM/

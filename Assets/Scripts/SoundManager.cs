@@ -15,6 +15,7 @@ public class SoundManager : MonoBehaviour
     public AudioClip clear;
     public AudioClip click;
 
+
     void Awake()
     {
         // 싱글톤 유지

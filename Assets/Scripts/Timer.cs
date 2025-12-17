@@ -43,6 +43,7 @@ public class Timer : MonoBehaviour
             UpdateText(timeLeft);
         }
 
+        SoundManager.Instance.StopBGM();
         SceneManager.LoadScene(finishSceneName);
     }
 

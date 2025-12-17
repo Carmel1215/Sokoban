@@ -119,6 +119,51 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &10147289
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 10147291}
+  - component: {fileID: 10147290}
+  m_Layer: 0
+  m_Name: SceneBGM
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &10147290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 10147289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22b10b74ec4394a3a99914a1759a0013, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SceneBGM
+  bgm: {fileID: 8300000, guid: 32d67d9f2510d4d7caef717b2e3ecf74, type: 3}
+--- !u!4 &10147291
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 10147289}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 927.1426, y: 553.48737, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &476356493
 GameObject:
   m_ObjectHideFlags: 0
@@ -404,7 +449,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 0.5
+  m_Volume: 1
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -677,10 +722,10 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
-  m_PlayOnAwake: 1
-  m_Volume: 1
+  m_PlayOnAwake: 0
+  m_Volume: 0.25
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -810,8 +855,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SoundManager
   sfxSource: {fileID: 1138766394}
   bgmSource: {fileID: 1368290891}
-  move: {fileID: 8300000, guid: 5d299f4b45aef448e9f6fdfda9067d4e, type: 3}
-  boxPush: {fileID: 8300000, guid: f6150490cc1c84df9b61991ca6d51517, type: 3}
+  move: {fileID: 8300000, guid: 01f73359a580c4ec785e86c58bc786e9, type: 3}
+  boxPush: {fileID: 8300000, guid: 43fc06c43659b4a41902147c1805b080, type: 3}
   goal: {fileID: 0}
   clear: {fileID: 0}
   click: {fileID: 8300000, guid: 00bdeaf4f444d4f6b89776ac031bb09b, type: 3}
@@ -1116,3 +1161,4 @@ SceneRoots:
   - {fileID: 1893934915}
   - {fileID: 1515081562}
   - {fileID: 1761590119}
+  - {fileID: 10147291}
